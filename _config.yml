@@ -1,1 +1,6 @@
 theme: jekyll-theme-minimal
+title: Projects
+description: A collection of random coding projects.
+logo: /Images/logo.png
+show_downloads: false
+google_analytics: UA-159511948-5
