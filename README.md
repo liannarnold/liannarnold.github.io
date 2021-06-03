@@ -15,8 +15,3 @@
 ```markdown
 
 ```
-
-### Links
-
-[LinkedIn](https://www.linkedin.com/in/liannarnold/) -
-[GitHub](https://github.com/jojaba2u)
