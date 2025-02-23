@@ -2,6 +2,8 @@ name: Deploy to GitHub Pages
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 on:
   push:
@@ -11,20 +13,26 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '23'
+          node-version: '20'
 
       - name: Install PNPM
         uses: pnpm/action-setup@v2
         with:
           version: 8
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
 
       - name: Install dependencies
         run: pnpm install
@@ -32,8 +40,11 @@ jobs:
       - name: Build the project
         run: pnpm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          path: './dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
