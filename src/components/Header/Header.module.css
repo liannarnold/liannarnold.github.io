@@ -1,0 +1,48 @@
+.siteHeader {
+  width: 100%;
+  background: none;
+  padding: 1.2rem 0 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerContent {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  gap: 2.5rem;
+}
+.siteLogo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  margin-right: 2.5rem;
+}
+.mainNav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mainNav a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.mainNav a:focus, .mainNav a:hover {
+  color: var(--color-accent);
+  outline: none;
+}
+@media (max-width: 600px) {
+  .headerContent {
+    padding: 0 0.5rem;
+  }
+} 

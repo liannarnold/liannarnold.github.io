@@ -1,0 +1,61 @@
+import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
+import styles from "./Projects.module.css";
+
+// Placeholder project data
+const projects = [
+  {
+    name: "Portfolio Website",
+    url: "https://github.com/liannarnold/portfolio",
+    description: "A minimalist, responsive portfolio built with React and Vite.",
+    tech: ["React", "Vite", "CSS"]
+  }
+];
+
+const Projects = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  return (
+    <>
+      <Helmet>
+        <title>Projects | Liane Arnold</title>
+      </Helmet>
+      <main className={styles.projectsContainer} aria-label="Projects page">
+        <h1 className={styles.projectsTitle}>Projects</h1>
+        <section className={styles.projectsList} aria-label="Project list">
+          {projects.map((project, idx) => (
+            <div
+              className={`${styles.projectCard}${openIndex === idx ? ` ${styles.open}` : ""}`}
+              key={project.name}
+              tabIndex={0}
+              onMouseEnter={() => setOpenIndex(idx)}
+              onMouseLeave={() => setOpenIndex(null)}
+              onFocus={() => setOpenIndex(idx)}
+              onBlur={() => setOpenIndex(null)}
+              aria-expanded={openIndex === idx}
+            >
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.projectName}
+              >
+                {project.name}
+              </a>
+              <div className={styles.projectDetails} aria-hidden={openIndex !== idx}>
+                <p className={styles.projectDescription}>{project.description}</p>
+                <ul className={styles.projectTech}>
+                  {project.tech.map((tech) => (
+                    <li key={tech}>{tech}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </section>
+      </main>
+    </>
+  );
+};
+
+export default Projects;

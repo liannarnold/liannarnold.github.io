@@ -1,0 +1,92 @@
+.projectsContainer {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projectsTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.projectsList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.projectCard {
+  background: var(--color-bg);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 16px 0 rgba(110,126,133,0.08);
+  border: 1.5px solid var(--color-accent);
+  padding: 1.2rem 1.5rem;
+  transition: box-shadow 0.2s, border 0.2s;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+.projectCard:focus, .projectCard.open, .projectCard:hover {
+  box-shadow: 0 6px 32px 0 rgba(110,126,133,0.13);
+  border: 2px solid var(--color-slate-gray);
+}
+.projectName {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-slate-gray);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.projectCard:focus .projectName, .projectCard.open .projectName, .projectCard:hover .projectName {
+  color: var(--color-accent);
+}
+.projectDetails {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s cubic-bezier(.4,0,.2,1), opacity 0.2s;
+  margin-top: 0.5rem;
+}
+.projectCard.open .projectDetails,
+.projectCard:focus .projectDetails,
+.projectCard:hover .projectDetails {
+  max-height: 200px;
+  opacity: 1;
+}
+.projectDescription {
+  margin: 0.5rem 0 0.7rem 0;
+  color: var(--color-text);
+  font-size: 1rem;
+}
+.projectTech {
+  display: flex;
+  gap: 0.7rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.projectTech li {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-radius: 999px;
+  padding: 0.3em 0.9em;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .projectsContainer {
+    max-width: 98vw;
+    padding: 1.2rem 0.5rem;
+  }
+  .projectsTitle {
+    font-size: 1.3rem;
+  }
+  .projectCard {
+    padding: 1rem 0.7rem;
+  }
+} 

@@ -9,7 +9,7 @@
 
 ## Introduction
 
-Welcome to my projects website! This site is designed to provide an overview of my work, skills, and experiences.
+Welcome to my website! This site is designed to show off my skills and projects.
 
 ## Technologies Used
 

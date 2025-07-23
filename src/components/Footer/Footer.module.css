@@ -1,0 +1,20 @@
+.siteFooter {
+  width: 100%;
+  padding: 1.2rem 0 1.2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+}
+.footerContent {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+@media (max-width: 600px) {
+  .footerContent {
+    padding: 0 0.5rem;
+  }
+} 
