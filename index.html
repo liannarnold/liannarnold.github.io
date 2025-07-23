@@ -4,7 +4,20 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>Liane Arnold</title>
+    
+    <!-- These tags will be overridden by react-helmet-async -->
+    <meta name="description" content="Liane's personal website" />
+    
+    <!-- This script ensures the title is properly updated on initial load -->
+    <script>
+      // This helps with server-side rendering and initial page load
+      // The title will be updated by react-helmet-async after the app loads
+      document.addEventListener('DOMContentLoaded', function() {
+        // This ensures the title is set before React hydrates the page
+        document.title = 'Liane Arnold';
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>

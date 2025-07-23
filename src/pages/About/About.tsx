@@ -1,8 +1,7 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 import styles from "./About.module.css";
 import { FaAndroid, FaReact, FaPhp, FaDocker } from "react-icons/fa";
-import { SiReact, SiGo, SiKotlin, SiJavascript, SiTypescript, SiRancher, SiPostgresql, SiPostman } from "react-icons/si";
+import { SiGo, SiKotlin, SiJavascript, SiTypescript, SiRancher, SiPostgresql, SiPostman } from "react-icons/si";
 import { MdSmartphone } from "react-icons/md";
 
 const skills = [
@@ -29,13 +28,18 @@ const hobbies = [
 ];
 
 const About = () => {
+  // Update the title when the component mounts
+  useEffect(() => {
+    document.title = "About | Liane";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Learn more about Liane Arnold, a Senior Software Developer with 8 years of full-stack experience');
+    }
+  }, []);
+
   return (
-    <>
-      <Helmet>
-        <title>About | Liane Arnold</title>
-      </Helmet>
-      <main className={styles.aboutContainer} aria-label="About page">
-        <h1>About Me</h1>
+    <main className={styles.aboutContainer} aria-label="About page">
+      <h1>About Me</h1>
         <section className="about-section">
           <p className={styles.aboutParagraph}>
             I'm a senior software developer with 8 years of full-stack experience, based in Bossier City, Louisiana. I love solving complex problems, writing clean and efficient code, and building solutions that make a real impact.<br /><br />
@@ -64,8 +68,7 @@ const About = () => {
             ))}
           </ul>
         </section>
-      </main>
-    </>
+    </main>
   );
 };
 
