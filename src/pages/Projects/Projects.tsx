@@ -4,7 +4,7 @@ import styles from "./Projects.module.css";
 const projects = [
   {
     name: "Portfolio Website",
-    url: "https://github.com/liannarnold/portfolio",
+    url: "https://github.com/liannarnold/liannarnold.github.io",
     description: "A minimalist, responsive portfolio built with React and Vite.",
     tech: ["React", "Vite", "CSS"]
   }
