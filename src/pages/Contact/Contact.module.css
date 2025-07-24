@@ -23,7 +23,6 @@
   }
 }
 
-/* Intro section */
 .introSection {
   text-align: center;
   margin-bottom: 2rem;
@@ -38,7 +37,6 @@
   color: var(--color-text);
 }
 
-/* Form styles */
 .contactForm {
   display: flex;
   flex-direction: column;
@@ -79,7 +77,6 @@
   box-shadow: 0 0 0 3px rgba(110, 126, 133, 0.1);
 }
 
-/* Button styles */
 .ctaBtn {
   background: var(--color-btn-bg);
   color: var(--color-btn-text);
@@ -111,7 +108,6 @@
   outline-offset: 2px;
 }
 
-/* Success message */
 .contactSuccess {
   color: var(--color-accent);
   font-size: 1.2rem;
@@ -123,7 +119,6 @@
   max-width: 100%;
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
   .contactContainer {
     padding: 1.5rem 0.8rem;

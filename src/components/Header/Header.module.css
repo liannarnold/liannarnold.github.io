@@ -37,7 +37,6 @@
   z-index: 10;
 }
 
-/* Menu Container */
 .menuContainer {
   position: relative;
   display: flex;
@@ -88,7 +87,6 @@
   display: block;
 }
 
-/* Navigation */
 .mainNav {
   display: flex;
   align-items: center;
@@ -120,7 +118,6 @@
   outline: none;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -177,12 +174,8 @@
   .hamburgerActive span:last-child {
     transform: translateY(-11px) rotate(-45deg);
   }
-
-  /* Add overlay when menu is open */
-  /* Remove the overlay since we're not using absolute positioning anymore */
 }
 
-/* Small screens */
 @media (max-width: 600px) {
   .headerContent {
     padding: 0 1rem;

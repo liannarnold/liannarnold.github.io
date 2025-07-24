@@ -8,7 +8,8 @@ import Projects from './pages/Projects/Projects';
 import Contact from './pages/Contact/Contact';
 
 function AppRouter() {
-  // Reset scroll to top on route change
+
+  // Scroll to top after navigating to a new page
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

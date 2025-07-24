@@ -28,7 +28,7 @@ const hobbies = [
 ];
 
 const About = () => {
-  // Update the title when the component mounts
+  
   useEffect(() => {
     document.title = "About | Liane";
     const metaDescription = document.querySelector('meta[name="description"]');

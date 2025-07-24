@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./Projects.module.css";
 
-// Placeholder project data
 const projects = [
   {
     name: "Portfolio Website",
@@ -14,7 +13,6 @@ const projects = [
 const Projects = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  // Update the title when the component mounts
   useEffect(() => {
     document.title = "Projects | Liane";
     const metaDescription = document.querySelector('meta[name="description"]');

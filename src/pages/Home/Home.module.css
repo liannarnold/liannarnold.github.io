@@ -55,38 +55,6 @@
   margin-bottom: 2rem;
   color: var(--color-text);
 }
-.ctaNav {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-.ctaBtn {
-  background: var(--color-btn-bg);
-  color: var(--color-btn-text);
-  border: none;
-  border-radius: 999px;
-  padding: 0.7em 1.6em;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 1px 4px 0 rgba(110,126,133,0.08);
-  transition: background 0.2s, color 0.2s, border 0.2s;
-  outline: none;
-  cursor: pointer;
-}
-.ctaBtn:focus {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
-}
-.ctaBtnSecondary {
-  background: var(--color-btn-secondary-bg);
-  color: var(--color-btn-secondary-text);
-  border: 2px solid var(--color-btn-secondary-border);
-}
-.ctaBtnSecondary:focus {
-  outline: 2px solid var(--color-accent);
-}
 @media (max-width: 600px) {
   .homeContainer {
     padding: 1.2rem 0.5rem;

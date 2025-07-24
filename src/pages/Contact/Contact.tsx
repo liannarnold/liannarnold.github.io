@@ -14,7 +14,6 @@ const Contact = () => {
     setSubmitted(true);
   };
 
-  // Update the title when the component mounts
   useEffect(() => {
     document.title = "Contact | Liane";
     const metaDescription = document.querySelector('meta[name="description"]');
