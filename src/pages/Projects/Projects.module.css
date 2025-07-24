@@ -1,8 +1,8 @@
 .projectsContainer {
   width: 100%;
   max-width: 700px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
+  margin: 1rem auto;
+  padding: 1rem 1rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,6 +10,8 @@
   border-radius: 1.5rem;
   box-shadow: 0 2px 16px 0 rgba(110,126,133,0.08);
   backdrop-filter: blur(2px);
+  text-align: center;
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,7 +24,7 @@
 .projectsTitle {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin: 0.5rem 0 1.5rem;
   text-align: center;
 }
 .projectsList {
