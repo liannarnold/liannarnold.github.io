@@ -119,6 +119,13 @@
   max-width: 100%;
 }
 
+.errorMessage {
+  color: #ff4444;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
 @media (max-width: 600px) {
   .contactContainer {
     padding: 1.5rem 0.8rem;
