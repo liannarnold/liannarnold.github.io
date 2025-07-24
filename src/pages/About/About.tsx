@@ -50,7 +50,7 @@ const About = () => {
           </p>
         </section>
         <section className={styles.skillsSection} aria-label="Skills">
-          <h2>Skills</h2>
+          <h2 className={styles.skillsTitle}>Skills</h2>
           <ul className={styles.skillsList}>
             {skills.map((skill) => (
               <li key={skill.name} className={styles.skillItem}>
@@ -61,7 +61,7 @@ const About = () => {
           </ul>
         </section>
         <section className={styles.hobbiesSection} aria-label="Hobbies">
-          <h2>Hobbies</h2>
+          <h2 className={styles.hobbiesTitle}>Hobbies</h2>
           <ul className={styles.hobbiesList}>
             {hobbies.map((hobby) => (
               <li key={hobby.name} className={styles.hobbyItem}>
