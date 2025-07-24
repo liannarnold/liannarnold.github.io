@@ -10,7 +10,7 @@ const Home = () => {
     document.title = "Home | Liane";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Liane Arnold - Senior Software Developer with expertise in full-stack development');
+      metaDescription.setAttribute('content', 'Liane Arnold - Senior Software Developer');
     }
   }, []);
 
@@ -28,9 +28,6 @@ const Home = () => {
         </div>
         <p className={styles.titleLocation} tabIndex={0}>
           Senior Software Developer · Haughton, LA
-        </p>
-        <p className={styles.intro} tabIndex={0}>
-          Passionate about building robust, elegant software solutions. Driven by curiosity, collaboration, and a love for learning.
         </p>
       </section>
     </main>

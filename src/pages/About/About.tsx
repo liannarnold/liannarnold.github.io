@@ -42,8 +42,11 @@ const About = () => {
       <h1>About Me</h1>
         <section className="about-section">
           <p className={styles.aboutParagraph}>
-            I'm a senior software developer with 8 years of full-stack experience, based in Bossier City, Louisiana. I love solving complex problems, writing clean and efficient code, and building solutions that make a real impact.<br /><br />
-            I'm always learning—whether it's a new framework, tool, or approach—and I thrive on collaborating with others to bring ideas to life. My background spans both frontend and backend, and I'm comfortable owning projects from concept to deployment. If you're working on something interesting or just want to connect, feel free to reach out!
+            I'm a senior software developer with 8 years of full-stack experience. I enjoy solving complex problems, 
+            writing clean and efficient code, and building products that make a real impact.<br /><br />
+            I'm always learning and I thrive on collaborating with others to bring ideas to life. 
+            My background spans both frontend and backend, and I'm comfortable owning projects from concept to deployment. 
+            If you're working on something interesting or just want to connect. Feel free to contact me!
           </p>
         </section>
         <section className={styles.skillsSection} aria-label="Skills">
