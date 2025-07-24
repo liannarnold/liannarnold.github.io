@@ -6,6 +6,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: rgba(248, 250, 252, 0.9);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px 0 rgba(110,126,133,0.08);
+  backdrop-filter: blur(2px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .projectsContainer {
+    background: rgba(255,255,255,0.10);
+    border: 1.5px solid var(--color-french-gray);
+    box-shadow: 0 4px 32px 0 rgba(187,186,198,0.10);
+  }
 }
 .projectsTitle {
   font-size: 2rem;

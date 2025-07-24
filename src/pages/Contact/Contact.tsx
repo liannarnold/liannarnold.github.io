@@ -24,9 +24,9 @@ const Contact = () => {
   }, []);
 
   return (
-    <main className={`home-container ${styles.contactContainer}`} aria-label="Contact page">
-      <section className="intro-section">
-        <h1 className="name" tabIndex={0}>Contact</h1>
+    <main className={`${styles.contactContainer} container container--narrow`} aria-label="Contact page">
+      <section className={styles.introSection}>
+        <h1 className={styles.name} tabIndex={0}>Contact</h1>
         {submitted ? (
           <div className={styles.contactSuccess} role="status">Thank you for reaching out!</div>
         ) : (
@@ -40,6 +40,7 @@ const Contact = () => {
               required
               autoComplete="name"
               placeholder="Name"
+              className={styles.input}
             />
             <input
               id="email"
@@ -50,6 +51,7 @@ const Contact = () => {
               required
               autoComplete="email"
               placeholder="Email"
+              className={styles.input}
             />
             <textarea
               id="message"
@@ -59,8 +61,9 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               required
+              className={styles.textarea}
             />
-            <button type="submit" className="cta-btn">Send Message</button>
+            <button type="submit" className={styles.ctaBtn}>Send Message</button>
           </form>
         )}
       </section>
